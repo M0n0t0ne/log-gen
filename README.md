@@ -1,5 +1,9 @@
 # log-gen
+### Purpose
+
 The purpose of this script is to help you easily log system or file changes through the command line. 
+
+### Usage
 
 usage: log-gen.py [-h] [-g] [-d] [-s] [-b] [-c] [-a] [-r] [-t]
 
