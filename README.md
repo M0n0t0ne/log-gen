@@ -1,21 +1,8 @@
 # log-gen
-### Purpose
+The aim of this script is to help you manually log system or file changes through the command line. With the help of switches, you can generate a log file that best suites your needs, aiming at being both functional and highly customizable. 
 
-The purpose of this script is to help you easily log system or file changes through the command line. 
-
+## Installation
+In the terminal, type git clone https://github.com/M0n0t0ne/log-gen
 ### Usage
 
 usage: log-gen.py [-h] [-g] [-d] [-s] [-b] [-c] [-a] [-r] [-t]
-
-optional arguments
-  -h, --help      show this help message and exit
-   g, --generate  Generates logfile in HOME directory.
-  -d, --delete    Deletes logfile
-  -s, --show      Show's the log file
-  -b, --backup    Creates a copy of logfile
-  -c, --create    Creates an file banner
-  -a, --add       Addition tag
-  -r, --remove    Removal tag
-  -t, --todo      Todo tag
-
- 
