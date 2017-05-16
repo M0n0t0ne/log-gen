@@ -12,7 +12,6 @@ import shutil
 HOME = expanduser("~") # Generate log file in home directory
 LOG_NAME = "CHANGELOG.txt" # Name of log file
 HEADER_TEXT= "System Changelog" # in-text header
-STARTING_LINE= 11 # Where each entry appends at (spacing)
 CURRENT_TIME = time.strftime("%I:%M:%S")
 CURRENT_DATE = time.strftime("%d/%m/%Y")
 BACKUP = "backup/" # Backup file name
@@ -107,7 +106,7 @@ def entry_create(): #creates an entry header
         sys.exit()
     contents = f.readlines()
     f.close()
-    contents.insert(STARTING_LINE, """\n\n[*] Entry On {}
+    contents.insert(10, """\n\n[*] Entry On {}
  ========================\n""".format(CURRENT_DATE))
 
     f = open(LOG_NAME, "w")
@@ -128,7 +127,7 @@ def event_add():
     contents = f.readlines()
     f.close()
     user_prompt = input("{}Addition{}: ".format(PROMPT, COL_EXIT))    
-    contents.insert(11, "{}[+] {}{}{}{}: {}\n".format(ADD_COLOR, COL_EXIT, TIME_COLOR,CURRENT_TIME,COL_EXIT, user_prompt))
+    contents.insert(10, "{}[+] {}{}{}{}: {}\n".format(ADD_COLOR, COL_EXIT, TIME_COLOR,CURRENT_TIME,COL_EXIT, user_prompt))
     f = open(LOG_NAME, "w")
     contents = "".join(contents)
     f.write(contents)
